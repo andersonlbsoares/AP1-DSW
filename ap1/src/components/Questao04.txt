@@ -1,0 +1,11 @@
+O problema do "Props Drilling" ocorre em sistemas onde uma propriedade precisa ser passada através de vários níveis de componentes, mesmo que alguns componentes intermediários não a utilizem diretamente. Quando se há muito componentes pode resultar em código confuso, difícil de manter e propenso a erros.
+
+O uso de contextos no React é uma solução para o problema de Props Drilling. O contexto permite criar uma árvore de componentes onde um valor é disponibilizado para todos os componentes descendentes, sem a necessidade de passá-lo explicitamente através de cada nível intermediário.
+
+Em sistemas mais complexos, o Redux é uma opção popular para gerenciar estados globais, incluindo o compartilhamento de dados entre componentes.
+
+Um exemplo prático de como o uso de contextos pode resolver o problema de "Props Drilling" é quando queremos passar um tema, que pode ser um objeto contendo cores e estilos, para um componente muito abaixo na hierarquia.
+
+Sem o uso de contextos, teríamos que passar explicitamente esse tema através de todos os componentes intermediários, mesmo que eles não façam uso direto dele. Isso pode levar a um código confuso e difícil de manter.
+
+Usando contextos, podemos definir um contexto para o tema e fornecer o valor do tema para todos os componentes descendentes que necessitam dele. Assim, qualquer componente dentro dessa subárvore pode acessar e utilizar esse objeto de tema sem a necessidade de passá-lo explicitamente entre todos os componentes intermediários.
